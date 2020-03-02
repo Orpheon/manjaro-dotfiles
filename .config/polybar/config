@@ -17,7 +17,7 @@
 ;==========================================================
 
 [colors]
-background = ${xrdb:color0:#222}
+background = #77000000 
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
@@ -34,14 +34,14 @@ height = 27
 ;offset-x = 1%
 ;offset-y = 1%
 radius = 0
-fixed-center = false
+fixed-center = true
 ;separator =
 
 ;--------;
 ; COLORS ;
 ;--------;
 
-background = #ff11232a
+background = #77000000
 background-alt = #555
 foreground = #dfdfdf
 foreground-alt = #555
@@ -73,8 +73,8 @@ font-2 = Font Awesome 5 Free Solid:pixelsize=12;1
 
 ;xwindow for window names
 modules-left = i3 
-;modules-center = backlight alsa
-modules-right = vpnstatus wlan eth filesystem battery1 date
+modules-center = date 
+modules-right = wlan battery1 alsa cpu
 
 ;tray-position = right
 ;tray-padding = 2
@@ -93,11 +93,6 @@ modules-right = vpnstatus wlan eth filesystem battery1 date
 
 cursor-click = pointer
 cursor-scroll = ns-resize
-
-[module/vpnstatus]
-type = custom/script
-exec = ~/.config/polybar/scripts/vpnstatus.sh
-interval = 5
 
 [module/xwindow]
 type = internal/xwindow
@@ -251,7 +246,7 @@ card = intel_backlight
 [module/cpu]
 type = internal/cpu
 interval = 2
-format-prefix = " "
+format-prefix = "CPU: "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
 label = %percentage:2%%
@@ -266,7 +261,7 @@ label = %percentage_used%%
 
 [module/wlan]
 type = internal/network
-interface = wlp3s0 
+interface = wlp4s0 
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -285,22 +280,6 @@ ramp-signal-2 = 
 ramp-signal-3 = 
 ramp-signal-4 = 
 ramp-signal-foreground = ${colors.foreground-alt}
-
-[module/eth]
-type = internal/network
-interface = enp0s25 
-interval = 3.0
-
-format-connected-underline = #55aa55
-format-connected-prefix = " "
-format-connected-prefix-foreground = ${colors.foreground-alt}
-label-connected = %local_ip%
-
-format-disconnected =
-;format-disconnected = <label-disconnected>
-;format-disconnected-underline = ${self.format-connected-underline}
-;label-disconnected = %ifname% disconnected
-;label-disconnected-foreground = ${colors.foreground-alt}
 
 [module/date]
 
@@ -336,15 +315,15 @@ ramp-volume-2 = 
 
 [module/battery1]
 type = internal/battery
-battery = BAT1
+battery = BAT0
 adapter = AC 
 full-at = 98
 
-format-charging =  <ramp-capacity> <label-charging>
+format-charging =  <label-charging>
 
 format-discharging = <ramp-capacity> <label-discharging>
 
-format-full-prefix = "  "
+format-full-prefix = 
 format-full-prefix-foreground = ${colors.foreground-alt}
 
 ramp-capacity-0 = 
