@@ -40,7 +40,7 @@ bindcode 133 --release exec --no-startup-id rofi -show run
 bindsym $mod+Return exec kitty
 
 # Start a file explorer
-bindsym $mod+e exec kitty ranger 
+bindsym $mod+p exec kitty ranger 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -87,7 +87,7 @@ bindsym $mod+f fullscreen toggle
 # change container layout (stacked, tabbed, toggle split)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-#bindsym $mod+e layout toggle split
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -263,8 +263,8 @@ exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
 #bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightness
 
 # Load preconfigured layout
 #exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/fyodor/i3_layout_telegram.json'; telegram-desktop"
