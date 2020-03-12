@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/orpheon/manjaro-dotfiles/.config/ranger'
+let g:netrw_dirhist_3='/home/orpheon/.config/ranger'
+let g:netrw_dirhist_2='/home/orpheon/manjaro-dotfiles/.config/polybar'
+let g:netrw_dirhist_1='/home/orpheon/manjaro-dotfiles/.config/i3'

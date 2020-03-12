@@ -1,0 +1,4 @@
+#!/bin/bash
+pulseaudio --kill
+sleep 10
+pulseaudio --start

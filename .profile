@@ -7,4 +7,4 @@ export PATH=$PATH:$HOME/.scripts
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 gpgconf --launch gpg-agent
 
-
+alias doch='sudo $(history -p !-1)'

@@ -203,6 +203,8 @@ client.unfocused        #67CB55 #062C30 #ffffff #6A7466   #576953
 client.urgent           #AA6A7466 #A3AF9E #ffffff #900000   #900000
 client.placeholder      #AA6A7466 #062C30 #ffffff #000000   #404A3C
 
+# Start pulseaudio
+exec --no-startup-id pulseaudio
 
 # If using compton and nitrogen change below
 exec --no-startup-id nitrogen --restore; sleep 1; compton -b
@@ -258,9 +260,9 @@ exec --no-startup-id killall polybar; polybar -r top
 exec --no-startup-id xrandr --output eDP1 --mode 1920x1080
 
 # Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec xbacklight -inc 5 # increase screen brightness
