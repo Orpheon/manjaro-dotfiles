@@ -279,8 +279,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 5 # decrease screen brightnes
     for_window [class="^Chromium$"] floating disable 
 
 # Take screenshots
-bindsym --release Shift+Print exec --no-startup-id ~/.scripts/screenshot_area_hq
-bindsym --release Print exec --no-startup-id ~/.scripts/screenshot_full_hq
+bindsym --release Shift+Print exec --no-startup-id ~/.scripts/screenshot_area
+bindsym --release Print exec --no-startup-id ~/.scripts/screenshot_full
 bindsym Mod1+G exec --no-startup-id capture-gif
 
 # Log out/Restart/Shutdown

@@ -6,3 +6,6 @@ set guioptions ""
 
 # This fixes links not being open in a browser.
 set sandbox none
+
+set selection-clipboard clipboard
+
